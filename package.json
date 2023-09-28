@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "vercel-build": "set DATABASE_URL=%DATABASE_URL% && yarn prisma generate && yarn build",
+    "vercel-build": "yarn prisma generate && yarn build",
     "start": "next start",
     "lint": "next lint"
   },
