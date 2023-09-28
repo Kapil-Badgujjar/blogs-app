@@ -3,7 +3,6 @@
 import Image from "next/image";
 import styles from "./writePage.module.css";
 import { useEffect, useState } from "react";
-import "react-quill/dist/quill.bubble.css";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import {
@@ -13,7 +12,6 @@ import {
   getDownloadURL,
 } from "firebase/storage";
 import { app } from "@/utils/firebase";
-import ReactQuill from "react-quill";
 
 const WritePage = () => {
   const { status } = useSession();
@@ -113,7 +111,7 @@ const WritePage = () => {
       </select>
       <div className={styles.editor}>
         <button className={styles.button} onClick={() => setOpen(!open)}>
-          <Image src="/plus.png" alt="" width={16} height={16} />
+            <Image src="/plus.png" alt="" width={16} height={16} />
         </button>
         {open && (
           <div className={styles.add}>
@@ -134,19 +132,16 @@ const WritePage = () => {
             <button className={styles.addButton}>
               <Image src="/video.png" alt="" width={16} height={16} />
             </button>
+            <div>*Image upload featurer is currently in development phase</div>
           </div>
         )}
-        <ReactQuill
-          className={styles.textArea}
-          theme="bubble"
-          value={value}
-          onChange={setValue}
-          placeholder="Tell your story..."
-        />
+        <div>
+          <textarea className={styles.textArea} placeholder="Tell your story..." value={value} onChange={e=>setValue(e.target.value)} />
+        </div>
       </div>
       <button className={styles.publish} onClick={handleSubmit}>
         Publish
-      </button>
+      </button> 
     </div>
   );
 };

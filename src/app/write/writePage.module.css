@@ -9,13 +9,17 @@
   padding: 10px 20px;
   margin-left: 50px;
   width: max-content;
+  background-color: rgb(216, 216, 216);
+  
 }
 
 .editor {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
   height: 700px;
   position: relative;
+  margin: 0px 50px;
 }
 
 .button,
@@ -59,7 +63,10 @@
 }
 
 .textArea {
-  width: 100%;
+  width: 63vw;
+  height: 400px;
+  padding: 20px;
+  font-family: '__Inter_e66fe9', '__Inter_Fallback_e66fe9';
 }
 
 .publish{

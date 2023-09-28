@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "vercel-build": "yarn prisma generate && yarn build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -24,7 +25,6 @@
     "prisma": "^5.2.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-quill": "^2.0.0",
     "swr": "^2.2.2"
   }
 }
