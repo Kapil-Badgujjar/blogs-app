@@ -22,6 +22,12 @@
     ],
     "env": {
       "DATABASE_URL": "@your-database-url"
-    }
+    },
+    "commands": [
+      "yarn prisma generate",
+      "yarn build"
+    ],
+    "use": "@now/next"
+
   }
   
